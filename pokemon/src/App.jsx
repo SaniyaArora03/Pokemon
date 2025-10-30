@@ -1,5 +1,7 @@
-import { Pokemon } from "./Pokemon"
+import { Pokemon } from "./Pokemon";
 
-export const App=()=>{
-    return <Pokemon/>;
+function App() {
+  return <Pokemon />;
 }
+
+export default App;

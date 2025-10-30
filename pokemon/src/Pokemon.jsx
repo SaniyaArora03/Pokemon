@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./index.css" ;
 import {PokemonCards} from  "./PokemonCards.jsx"
 export const Pokemon=()=>{
     const   API="https://pokeapi.co/api/v2/pokemon?limit=24";
-    const  fetchPokemon=async()=>{
-        const[pokemon,setPokemon]=useState([]);
+    const[pokemon,setPokemon]=useState([]);
         const[loading,setLoading]=useState(true); 
         const[error,setError]=useState(null);  
         const[search,setSearch]=useState("");
+    const  fetchPokemon=async()=>{
+        
         try{
             const   res=await fetch(API) ; 
             const   data=await  res.json();
